@@ -1,5 +1,5 @@
 // Test to see script.js is being loaded:
-console.log("Welcome to Bryan Miller's Rock Paper Scissors Project");
+console.log("Welcome to Bryan Miller's Rock Paper Scissors Project\n\n");
 
 // Function: Randomly return Rock, Paper or Scissors
 function getComputerChoice() {
@@ -24,31 +24,23 @@ function playRound(playerSelection, computerSelection) {
   // Convert playerSelection to Title Case
   playerSelection = toTitleCase(playerSelection);
 
-  // If player & computer select the same thing, it's a tie
-  // If player = rock, computer = scissors, player wins
-  // If player = rock & computer = paper, computer wins
-  // If player = scissors & computer = rock, computer wins
-  // If player = scissors & computer = paper, player wins
-  // If player = paper & computer = rock, player wins
-  // If player = paper & computer = scissors, player wins
-
-  if (playerSelection === computerSelection) {
-    return `It's a tie! You both chose ${playerSelection}!`;
-
-    // If player = rock
-  } else if (playerSelection === "Rock") {
-    switch (computerSelection) {
-      case "Scissors":
-        console.log("You Win! Rock beats Scissors.");
-        break;
-      case "Paper":
-        console.log("You Lose! Paper beats Rock.");
-        break;
-    }
-  }
-
   // Debugging: Return choices
-  return "Comp: " + computerSelection + " | You: " + playerSelection;
+  console.log(
+    "Player:\t\t" + playerSelection + "\nComputer:\t" + computerSelection
+  );
+
+  // If player & computer select the same thing, it's a tie
+  if (playerSelection === computerSelection)
+    return `It's a tie! You both chose ${playerSelection}!`;
+  else if (
+    // If the player has a winning combination, declare him the winner:
+    (playerSelection === "Rock" && computerSelection == "Scissors") ||
+    (playerSelection === "Scissors" && computerSelection == "Paper") ||
+    (playerSelection === "Paper" && computerSelection == "Rock")
+  )
+    return `You Win!\t${playerSelection} beats ${computerSelection}!`;
+  // If the player didn't win & it isn't a tie, declare the computer the winner:
+  else return `You Lose!\t${computerSelection} beats ${playerSelection}`;
 }
 
 // Function: Convert string to title case (from exercises)
