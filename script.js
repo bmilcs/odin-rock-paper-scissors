@@ -1,7 +1,10 @@
-// Test to see script.js is being loaded:
+// Display game title to console
 console.log("Welcome to Bryan Miller's Rock Paper Scissors Project\n\n");
 
+//
 // Function: Randomly return Rock, Paper or Scissors
+//
+
 function getComputerChoice() {
   // Create an array with values rock, paper, Scissors
   let computerChoice = ["Rock", "Paper", "Scissors"];
@@ -13,17 +16,20 @@ function getComputerChoice() {
   return computerChoice[randomNumber];
 }
 
-// Function to generate a random number between 0 to Array Length
+//
+// Function: Generate a random number between 0 to Array Length
+//
+
 function getRandomInt(min, max) {
   // Generate a random number between two values:
   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 }
 
-// Function that plays a single round of Rock Paper Scissors
-function playRound(playerSelection, computerSelection) {
-  // Convert playerSelection to Title Case
-  playerSelection = toTitleCase(playerSelection);
+//
+// Function: Play a single round of Rock Paper Scissors
+//
 
+function playRound(playerSelection, computerSelection) {
   // Debugging: Return choices
   console.log(
     "Player:\t\t" + playerSelection + "\nComputer:\t" + computerSelection
@@ -43,7 +49,10 @@ function playRound(playerSelection, computerSelection) {
   else return `You Lose!\t${computerSelection} beats ${playerSelection}`;
 }
 
+//
 // Function: Convert string to title case (from exercises)
+//
+
 function toTitleCase(string) {
   // Convert string to lower case
   let titleCase = string.toLowerCase();
@@ -53,7 +62,28 @@ function toTitleCase(string) {
   return titleCase.replace(/^./, firstLetter.toUpperCase());
 }
 
+//
+// Function: Play a 5 round game of rock, paper, scissors
+//
+
+function game() {
+  // Declare playerScore variable
+  // Declare computerScore variable
+  // Declare playerSelection variable
+  // While gameCount is less than 5(-1)
+  // Wipe playerSelection variable clean
+  // While playerSelection isn't an invalid value, prompt user for a selection, assign value to playerSelection and convert to Title Case
+  // Invoke playRound with playerSelection & getComputerChoice() function & assign return value to a variable
+  playRound(playerSelection, getComputerChoice()
+  // If return value of a game contains You Win, increment playerScore
+  // If return value of a game contains You Lose, increment computerScore
+  // Print the final score
+  // If playerScore = computerScore, declare a tie
+  // Else If playerScore > computerScore, declare player a winner
+  // Else declare the computer the winner
+}
+
 const playerSelection = "rock";
 const computerSelection = getComputerChoice();
 
-console.log(playRound(playerSelection, getComputerChoice()));
+game();
