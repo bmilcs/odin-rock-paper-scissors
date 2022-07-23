@@ -54,6 +54,11 @@ function playRound(playerSelection, computerSelection) {
 //
 
 function toTitleCase(string) {
+  // If string is empty, return
+  if (string === "") {
+    return;
+  }
+
   // Convert string to lower case
   let titleCase = string.toLowerCase();
   // Get first letter of string
@@ -67,23 +72,62 @@ function toTitleCase(string) {
 //
 
 function game() {
-  // Declare playerScore variable
-  // Declare computerScore variable
+  // Declare playerScore variable & assign value of 0
+  let playerScore = 0;
+  // Declare computerScore variable & assign value of 0
+  let computerScore = 0;
   // Declare playerSelection variable
-  // While gameCount is less than 5(-1)
-  // Wipe playerSelection variable clean
-  // While playerSelection isn't an invalid value, prompt user for a selection, assign value to playerSelection and convert to Title Case
-  // Invoke playRound with playerSelection & getComputerChoice() function & assign return value to a variable
-  playRound(playerSelection, getComputerChoice()
-  // If return value of a game contains You Win, increment playerScore
-  // If return value of a game contains You Lose, increment computerScore
-  // Print the final score
-  // If playerScore = computerScore, declare a tie
-  // Else If playerScore > computerScore, declare player a winner
-  // Else declare the computer the winner
-}
+  let playerSelection;
+  // Declare gameResult
+  let gameResult;
 
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
+  // While gameCount is less than 5
+  for (let gameCount = 0; gameCount < 5; gameCount++) {
+    // Wipe playerSelection variable clean
+    playerSelection = "";
+    // While playerSelection isn't an invalid value
+    while (
+      playerSelection != "Rock" &&
+      playerSelection != "Paper" &&
+      playerSelection != "Scissors"
+    ) {
+      // Prompt user for a selection and assign value to playerSelection and convert to Title Case
+      playerSelection = toTitleCase(
+        prompt(
+          `Make a selection for game #${
+            gameCount + 1
+          }.\n\nRock, Paper or Scissors?`
+        )
+      );
+    }
+
+    // Invoke playRound with playerSelection & getComputerChoice() function & assign return value to a variable
+    result = playRound(playerSelection, getComputerChoice());
+
+    // Print game results
+    console.log(result);
+    // If return value of a game contains You Win, increment playerScore
+    if (result.includes("You Win")) playerScore++;
+    // Else if return value of a game contains You Lose, increment computerScore
+    else if (result.includes("You Lose")) computerScore++;
+  }
+
+  // Print the final score
+  console.log(
+    `Final Score:\nPlayer:\t\t${playerScore}\nComputer:\t${computerScore}`
+  );
+
+  // If playerScore = computerScore, declare a tie
+  if (playerScore === computerScore)
+    console.log(`It's a Tie! You both won ${playerScore} out of 5 games!`);
+  // Else If playerScore > computerScore, declare player a winner
+  else if (playerScore > computerScore)
+    console.log(`You Win! You won by ${playerScore - computerScore} game(s)!`);
+  // Else declare the computer the winner
+  else
+    console.log(
+      `You Lose! You lost by ${computerScore - playerScore} game(s)!`
+    );
+}
 
 game();
