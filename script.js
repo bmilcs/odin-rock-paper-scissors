@@ -85,7 +85,7 @@ function game() {
   for (let gameCount = 0; gameCount < 5; gameCount++) {
     // Wipe playerSelection variable clean
     playerSelection = "";
-    // While playerSelection isn't an invalid value
+    // While playerSelection isn't a valid value
     while (
       playerSelection != "Rock" &&
       playerSelection != "Paper" &&
