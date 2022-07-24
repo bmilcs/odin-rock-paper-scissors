@@ -2,17 +2,17 @@
 console.log("Welcome to Bryan Miller's Rock Paper Scissors Project\n\n");
 
 //
-// Function: Randomly return Rock, Paper or Scissors
+// Function: Randomly return Rock, Paper or Scissors for Computer's Selection
 //
 
 function getComputerChoice() {
   // Create an array with values rock, paper, Scissors
   let computerChoice = ["Rock", "Paper", "Scissors"];
 
-  // Generate a random number from 0 to array's max length (overkill, but wanting to practice)
+  // Generate a random number from 0 to array's max length (overkill, but wanting practice)
   let randomNumber = getRandomInt(0, computerChoice.length);
 
-  // Return value of the random number index in the array
+  // Return value of the random number as the index # of the array
   return computerChoice[randomNumber];
 }
 
@@ -21,8 +21,8 @@ function getComputerChoice() {
 //
 
 function getRandomInt(min, max) {
-  // Generate a random number between two values:
-  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  // Generate a random number between two values
+  return Math.floor(Math.random() * (max - min) + min);
 }
 
 //
