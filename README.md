@@ -19,6 +19,7 @@ Welcome to Bryan Miller's Rock Paper Scissors Project, the [third assignment](ht
   - Creating a plan & writing pseudocode
   - Dividing & conquering: solving sub-problems one by one
   - Connecting sub-problems into a final solution
+- [Andy Harris's 'Think like a programmer' technique](https://www.youtube.com/watch?v=azcrPFhaY9k)
 - Git Fundamentals
 
 # Links
