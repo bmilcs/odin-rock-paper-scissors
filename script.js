@@ -39,7 +39,7 @@ function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection)
     return `It's a tie! You both chose ${playerSelection}!`;
   else if (
-    // If the player has a winning combination, declare him the winner:
+    // If the player has a winning combination, declare them the winner:
     (playerSelection === "Rock" && computerSelection == "Scissors") ||
     (playerSelection === "Scissors" && computerSelection == "Paper") ||
     (playerSelection === "Paper" && computerSelection == "Rock")
@@ -91,7 +91,7 @@ function game() {
       playerSelection != "Paper" &&
       playerSelection != "Scissors"
     ) {
-      // Prompt user for a selection and assign value to playerSelection and convert to Title Case
+      // Prompt user for a selection, assign value to playerSelection and convert to Title Case
       playerSelection = toTitleCase(
         prompt(
           `Make a selection for game #${
@@ -101,7 +101,7 @@ function game() {
       );
     }
 
-    // Invoke playRound with playerSelection & getComputerChoice() function & assign return value to a variable
+    // Invoke playRound with playerSelection & getComputerChoice() parameters & assign return value to result variable
     result = playRound(playerSelection, getComputerChoice());
 
     // Print game results

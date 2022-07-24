@@ -3,7 +3,7 @@
 Welcome to Bryan Miller's Rock Paper Scissors Project, the [third assignment](https://www.theodinproject.com/lessons/foundations-rock-paper-scissors) within the Odin Project curriculum. The goal of this repo is to practice the following skill sets:
 
 - JavaScript Basics
-  - Variables
+  - Variables & Scope
   - String & Number Data Types
   - Arrays
   - Functions, Parameters & Return Values
@@ -11,7 +11,7 @@ Welcome to Bryan Miller's Rock Paper Scissors Project, the [third assignment](ht
   - Strict Equality
   - Comparison Operators
   - Math methods: `floor` & `random`
-  - String methods: `toLowerCase`, `charAt`, `replace`
+  - String methods: `toLowerCase`, `toUpperCase`, `charAt`, `replace`
   - Regular expressions
 - Chrome DevTools & Debugging
 - Problem Solving
