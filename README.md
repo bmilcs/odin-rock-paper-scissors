@@ -29,6 +29,8 @@ Welcome to Bryan Miller's Rock Paper Scissors Project, the [third assignment](ht
 
 ## Screenshots
 
+- None
+
 ## Deployment
 
 ```sh
