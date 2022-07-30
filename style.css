@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap");
 
-/* colors */
-/* 
-#96858f
-#6D7993
-#9099A2
-#D5D5D5
-*/
-
 * {
   box-sizing: border-box;
   color: #313131;
@@ -21,20 +13,16 @@
 
 body {
   background-color: #f4f4f4;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
 }
 
 .buttonContainer {
-  /* background-color: white; */
   border-radius: 8px;
   width: 600px;
   padding: 16px;
   margin: 24px auto;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 p {
@@ -44,13 +32,15 @@ p {
 
 button {
   padding: 16px;
-  width: 160px;
+  width: 140px;
   border-radius: 8px;
   font-size: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: 3px solid white; */
+  border: 0px;
+  filter: drop-shadow(3px 2px 4px #31313133);
+  background-color: white;
 }
 
 button > img {
@@ -60,15 +50,17 @@ button > img {
 
 .gameResult {
   padding: 50px;
+  font-weight: bold;
 }
 
 .titleBar {
   background-color: #4285f4;
-  padding: 100px 0px;
+  padding: 30px 0px;
   margin-bottom: 50px;
   color: #f4f4f4;
   font-weight: 900;
   font-size: 48px;
+  filter: drop-shadow(3px 2px 4px #31313133);
 }
 
 .scoreBoard {
@@ -80,8 +72,7 @@ button > img {
   display: flex;
   align-items: space-around;
   justify-content: space-evenly;
-  /* border: 3px solid #313131; */
-  filter: drop-shadow(3px 5px 2px #31313133);
+  filter: drop-shadow(3px 2px 4px #31313133);
 }
 
 .scoreContainer {
@@ -103,7 +94,10 @@ button > img {
   padding: 8px;
   align-items: center;
   margin-top: 12px;
-  border: 2px solid #353535;
+  /* border: 2px solid #353535; */
+  filter: drop-shadow(3px 2px 4px #31313133);
+  border-radius: 8px;
   background-color: #11cc80;
+  color: white;
   width: 100px;
 }
