@@ -48,36 +48,6 @@ function tallyResults() {
   playerScoreBoard.textContent = playerScore = 0;
 }
 
-// Play 5-Round Game
-function game() {
-  let playerScore = 0;
-  let computerScore = 0;
-  let playerSelection;
-  let gameResult;
-
-  playerSelection = "";
-  finalResults.innerHTML = playRound(playerSelection, getComputerChoice());
-
-  console.log(result);
-
-  if (result.includes("You Win")) playerScore++;
-  else if (result.includes("You Lose")) computerScore++;
-
-  console.log(
-    `Final Score:\nPlayer:\t\t${playerScore}\nComputer:\t${computerScore}`
-  );
-
-  // calculate final score
-  if (playerScore === computerScore)
-    console.log(`It's a Tie! You both won ${playerScore} out of 5 games!`);
-  else if (playerScore > computerScore)
-    console.log(`You Win! You won by ${playerScore - computerScore} game(s)!`);
-  else
-    console.log(
-      `You Lose! You lost by ${computerScore - playerScore} game(s)!`
-    );
-}
-
 // Function: Randomly return rock, paper or scissors for Computer's Selection
 function getComputerChoice() {
   let computerChoice = ["rock", "paper", "scissors"];
@@ -88,14 +58,4 @@ function getComputerChoice() {
 // Function: Generate a random number between 2 values
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
-}
-
-// Function: Convert string to title case (from exercises)
-function toTitleCase(string) {
-  if (string === "") {
-    return;
-  }
-  let titleCase = string.toLowerCase();
-  let firstLetter = titleCase.charAt();
-  return titleCase.replace(/^./, firstLetter.toUpperCase());
 }
