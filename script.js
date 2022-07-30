@@ -1,41 +1,34 @@
 // Display game title to console
 console.log("Welcome to Bryan Miller's Rock Paper Scissors Project\n\n");
 
-//
+let buttons = Array.from(document.getElementsByTagName("button"));
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    console.log(button.id);
+    console.log(playRound(button.id, getComputerChoice()));
+  });
+});
+
 // Function: Randomly return Rock, Paper or Scissors for Computer's Selection
-//
-
 function getComputerChoice() {
-  // Create an array with values rock, paper, Scissors
   let computerChoice = ["Rock", "Paper", "Scissors"];
-
-  // Generate a random number from 0 to array's max length (overkill, but wanting practice)
   let randomNumber = getRandomInt(0, computerChoice.length);
-
-  // Return value of the random number as the index # of the array
   return computerChoice[randomNumber];
 }
 
-//
-// Function: Generate a random number between 0 to Array Length
-//
-
+// Function: Generate a random number between 2 values
 function getRandomInt(min, max) {
-  // Generate a random number between two values
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-//
 // Function: Play a single round of Rock Paper Scissors
-//
-
 function playRound(playerSelection, computerSelection) {
   // Debugging: Return choices
   console.log(
     "Player:\t\t" + playerSelection + "\nComputer:\t" + computerSelection
   );
 
-  // If player & computer select the same thing, it's a tie
   if (playerSelection === computerSelection)
     return `It's a tie! You both chose ${playerSelection}!`;
   else if (
@@ -49,85 +42,12 @@ function playRound(playerSelection, computerSelection) {
   else return `You Lose!\t${computerSelection} beats ${playerSelection}`;
 }
 
-//
 // Function: Convert string to title case (from exercises)
-//
-
 function toTitleCase(string) {
-  // If string is empty, return
   if (string === "") {
     return;
   }
-
-  // Convert string to lower case
   let titleCase = string.toLowerCase();
-  // Get first letter of string
   let firstLetter = titleCase.charAt();
-  // Replace first character of string with capitalized version
   return titleCase.replace(/^./, firstLetter.toUpperCase());
 }
-
-//
-// Function: Play a 5 round game of rock, paper, scissors
-//
-
-function game() {
-  // Declare playerScore variable & assign value of 0
-  let playerScore = 0;
-  // Declare computerScore variable & assign value of 0
-  let computerScore = 0;
-  // Declare playerSelection variable
-  let playerSelection;
-  // Declare gameResult
-  let gameResult;
-
-  // While gameCount is less than 5
-  for (let gameCount = 0; gameCount < 5; gameCount++) {
-    // Wipe playerSelection variable clean
-    playerSelection = "";
-    // While playerSelection isn't a valid value
-    while (
-      playerSelection != "Rock" &&
-      playerSelection != "Paper" &&
-      playerSelection != "Scissors"
-    ) {
-      // Prompt user for a selection, assign value to playerSelection and convert to Title Case
-      playerSelection = toTitleCase(
-        prompt(
-          `Make a selection for game #${
-            gameCount + 1
-          }.\n\nRock, Paper or Scissors?`
-        )
-      );
-    }
-
-    // Invoke playRound with playerSelection & getComputerChoice() parameters & assign return value to result variable
-    result = playRound(playerSelection, getComputerChoice());
-
-    // Print game results
-    console.log(result);
-    // If return value of a game contains You Win, increment playerScore
-    if (result.includes("You Win")) playerScore++;
-    // Else if return value of a game contains You Lose, increment computerScore
-    else if (result.includes("You Lose")) computerScore++;
-  }
-
-  // Print the final score
-  console.log(
-    `Final Score:\nPlayer:\t\t${playerScore}\nComputer:\t${computerScore}`
-  );
-
-  // If playerScore = computerScore, declare a tie
-  if (playerScore === computerScore)
-    console.log(`It's a Tie! You both won ${playerScore} out of 5 games!`);
-  // Else If playerScore > computerScore, declare player a winner
-  else if (playerScore > computerScore)
-    console.log(`You Win! You won by ${playerScore - computerScore} game(s)!`);
-  // Else declare the computer the winner
-  else
-    console.log(
-      `You Lose! You lost by ${computerScore - playerScore} game(s)!`
-    );
-}
-
-game();
