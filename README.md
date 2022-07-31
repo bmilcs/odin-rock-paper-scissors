@@ -5,14 +5,18 @@ Welcome to Bryan Miller's Rock Paper Scissors Project, the [third assignment](ht
 - JavaScript Basics
   - Variables & Scope
   - String & Number Data Types
-  - Arrays
+  - Arrays & `forEach` loop
   - Functions, Parameters & Return Values
-  - For & While Loops
   - Strict Equality
   - Comparison Operators
   - Math methods: `floor` & `random`
   - String methods: `toLowerCase`, `toUpperCase`, `charAt`, `replace`
   - Regular expressions
+  - DOM Manipulation
+    - Event Handlers
+    - CSS Style changes
+    - Timeouts
+    - `querySelector` & `getElementById`
 - Chrome DevTools & Debugging
 - Problem Solving
   - Clearly defining the problem
