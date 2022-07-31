@@ -54,8 +54,9 @@ let playRound = function (playerSelection, computerSelection) {
   computerIcon.style.backgroundColor = colorGrey;
   computerIcon.style.border = "3px solid black";
   gameResult.style.color = "white";
+
+  // Disable tie, call original function again & return
   if (playerSelection == computerSelection) {
-    // Disable tie, call original function again & return
     playRound(playerSelection, getComputerChoice());
     return;
   } else if (
