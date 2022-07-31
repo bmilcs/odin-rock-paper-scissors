@@ -57,6 +57,11 @@ button > img {
   padding: 10px;
 }
 
+.notSelected {
+    opacity:0.1;
+    filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+
 .gameResult {
   margin: auto;
   padding: 24px;
