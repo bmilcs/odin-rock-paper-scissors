@@ -96,7 +96,7 @@ function resetRound() {
   });
   gameResult.style.backgroundColor = "white";
   gameResult.style.color = colorBlack;
-  gameResult.style.fontSize = "16px";
+  gameResult.style.fontSize = "24px";
   enableButtons();
 }
 
@@ -104,7 +104,7 @@ function resetRound() {
 function tallyResults() {
   gameResult.style.color = "white";
   window.setTimeout(() => {
-    gameResult.style.fontSize = "28px";
+    gameResult.style.fontSize = "32px";
     if (playerScore > computerScore) {
       gameResult.style.backgroundColor = colorGreen;
       gameResult.textContent = "You are the winner of 5 rounds!";
