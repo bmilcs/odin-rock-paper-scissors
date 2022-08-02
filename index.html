@@ -11,44 +11,52 @@
 </head>
 
 <body>
-  <div class="titleBar dropShadow">
-    Rock Paper Scissors
+  <header>
+    <div class="titleBar dropShadow">
+      Rock Paper Scissors
+    </div>
+  </header>
+
+  <section>
+    <div class="gameContainer">
+
+      <div class="buttonContainer dropShadow rounded">
+        <button id="rock"><img src='img/rock.png' alt="rock"></button>
+        <button id="paper"><img src='img/paper.png' alt="paper"></button>
+        <button id="scissors"><img src="img/scissors.png" alt="scissors"></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="gameResultContainer">
+    <div class="gameResult">Round 1</div>
   </div>
 
-  <div class="gameContainer dropShadow">
-
-    <div class="gameResult rounded">Round 1</div>
-
-    <div class="buttonContainer dropShadow rounded">
-      <button id="rock"><img src='img/rock.png' alt="rock"></button>
-      <button id="paper"><img src='img/paper.png' alt="paper"></button>
-      <button id="scissors"><img src="img/scissors.png" alt="scissors"></button>
-    </div>
-
-
-    <div class="scoreBoard dropShadow rounded">
-      <div class="scoreBoardTitle">Scoreboard</div>
-      <div class="scoresContainer">
-        <div class="scoreContainer">
-          You
-          <div class="playerContainer score rounded">0</div>
+  <section>
+    <div class="bottomContainer">
+      <div class="scoreBoard dropShadow rounded">
+        <div class="scoreBoardTitle">Score</div>
+        <div class="scoresContainer">
+          <div class="scoreContainer">
+            You
+            <div class="playerContainer score rounded">0</div>
+          </div>
+          <div class="scoreContainer">
+            Computer
+            <div class="computerContainer score rounded">0</div>
+          </div>
         </div>
-        <div class="scoreContainer">
-          Computer
-          <div class="computerContainer score rounded">0</div>
+      </div>
+
+      <div class="directionContainer rounded dropShadow">
+        <div class="instructions">
+          <h2>Directions</h2>
+          <p>Play a five round game of rock paper scissors vs. the computer. To begin, make your
+            selection for round #1.</p>
         </div>
       </div>
     </div>
-  </div>
-  </div>
-
-  <div class="bottomContainer rounded dropShadow">
-    <div class="instructions">
-      <h2>Directions</h2>
-      <p>Play a five round game of rock paper scissors vs. the computer. To begin, make your
-        selection for round #1.</p>
-    </div>
-
+  </section>
 
 </body>
 
