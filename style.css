@@ -24,24 +24,28 @@
 body {
   text-align: center;
   background-color: var(--clr-neutral-100);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
 }
 
-.titleBar {
+.title-bar {
   font-family: var(--ff-accent);
   font-weight: bold;
   text-transform: uppercase;
   padding: 2rem;
   background-color: var(--clr-blue);
   color: var(--clr-neutral-200);
-  font-size: clamp(2rem, 3rem, 4rem);
+  font-size: clamp(2rem, 10vw, 7rem);
 }
 
-.gameContainer {
+.game-container {
   background-color: var(--clr-neutral-100);
-  padding: 2rem;
+  padding: 1rem;
 }
 
-.buttonContainer {
+.button-container {
   border-radius: 0.5rem;
   gap: max(0.5rem, 5vw);
   margin: 2rem auto;
@@ -70,25 +74,28 @@ button > img {
   filter: alpha(opacity=40); /* For IE8 and earlier */
 }
 
-.gameResult {
+.game-results-container {
+  background-color: var(--clr-neutral-200);
+}
+
+.game-result {
   margin: auto;
-  padding: 1rem;
+  padding: 3rem;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-.bottomContainer {
-  /* background-color: var(--clr-blue); */
+.bottom-container {
   border-radius: 0.5rem;
   display: flex;
   flex-wrap: wrap;
-  max-width: 44rem;
+  max-width: 64rem;
   margin: 2rem auto;
-  padding: 0 2rem;
+  padding-inline: 2em;
   gap: 2rem;
 }
 
-.scoreBoard {
+.scoreboard {
   margin-inline: auto;
   background-color: var(--clr-neutral-800);
   display: flex;
@@ -98,7 +105,7 @@ button > img {
   margin: 1rem auto;
 }
 
-.scoreBoardTitle {
+.scoreboard-title {
   background-color: var(--clr-neutral-900);
   color: var(--clr-neutral-100);
   font-family: var(--ff-accent);
@@ -110,12 +117,14 @@ button > img {
   margin: 0;
 }
 
-.scoresContainer {
+/* contains 2x score-container */
+.scores-container {
   display: flex;
   flex-wrap: wrap;
 }
 
-.scoreContainer {
+/* contains score + label */
+.score-container {
   font-size: 1.25rem;
   color: var(--clr-neutral-100);
   padding: 1rem;
@@ -126,6 +135,7 @@ button > img {
   margin-inline: auto;
 }
 
+/* numerical score  */
 .score {
   font-size: 2.5rem;
   font-weight: bold;
@@ -134,16 +144,16 @@ button > img {
   width: 5rem;
 }
 
-.playerContainer {
+.player-score {
   background-color: var(--clr-blue);
 }
 
-.computerContainer {
+.computer-score {
   background-color: var(--clr-neutral-200);
   color: var(--clr-neutral-900);
 }
 
-.directionContainer {
+.directions-container {
   flex: 1;
   background-color: var(--clr-neutral-100);
   margin: 1rem auto;
@@ -158,11 +168,20 @@ button > img {
   min-width: 32ch;
 }
 
-.gameResultContainer {
-  background-color: var(--clr-neutral-200);
+.footer-container {
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-neutral-200);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.dropShadow {
+.footer-container > img {
+  width: 2rem;
+}
+
+.drop-shadow {
   filter: drop-shadow(3px 2px 4px var(--clr-neutral-850));
 }
 

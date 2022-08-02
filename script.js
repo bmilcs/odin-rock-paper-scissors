@@ -2,10 +2,10 @@
 console.log("Welcome to Bryan Miller's rock paper scissors Project\n\n");
 
 let buttons = Array.from(document.getElementsByTagName("button"));
-let playerScoreBoard = document.querySelector(".playerContainer");
-let computerScoreBoard = document.querySelector(".computerContainer");
-let gameResult = document.querySelector(".gameResult");
-let gameContainer = document.querySelector(".gameContainer");
+let playerScoreBoard = document.querySelector(".player-score");
+let computerScoreBoard = document.querySelector(".computer-score");
+let gameResult = document.querySelector(".game-result");
+let gameContainer = document.querySelector(".game-container");
 let playerScore = 0;
 let computerScore = 0;
 let gameCount = 0;
