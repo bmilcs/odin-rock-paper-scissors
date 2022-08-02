@@ -14,7 +14,7 @@ let colorGreen = "#11cc80";
 let colorRed = "#db4437";
 let colorBlack = "#313131";
 let colorBlue = "#4285f4";
-let colorGrey = "#BABCBE";
+let colorGrey = "#f5f5f5";
 let colorYellow = "#F4b400";
 
 // Enable buttons: Adds "enabled" class
@@ -70,6 +70,7 @@ function disableButtons() {
 // Function: Play a single round of rock paper scissors
 let playRound = function (playerSelection, computerSelection) {
   let computerIcon = document.getElementById(computerSelection);
+  let playerIcon = document.getElementById(playerSelection);
 
   // Disable tie, call original function again & return
   if (playerSelection == computerSelection) {
@@ -95,14 +96,16 @@ let playRound = function (playerSelection, computerSelection) {
     (playerSelection === "paper" && computerSelection == "rock")
   ) {
     // Player has won
-    gameResult.style.backgroundColor = colorGreen;
+    playerIcon.style.backgroundColor = gameResult.style.backgroundColor =
+      colorGreen;
     playerScoreBoard.textContent = ++playerScore;
     gameResult.textContent = `You Win!\t${toTitleCase(
       playerSelection
     )} beats ${toTitleCase(computerSelection)}!`;
   } else {
     // Computer has own
-    gameResult.style.backgroundColor = colorRed;
+    playerIcon.style.backgroundColor = gameResult.style.backgroundColor =
+      colorRed;
     computerScoreBoard.textContent = ++computerScore;
     gameResult.textContent = `You Lose!\t${toTitleCase(
       computerSelection
@@ -130,7 +133,7 @@ function resetRound() {
     button.classList.remove("notSelected");
   });
   gameContainer.style.backgroundColor = "white";
-  gameResult.style.backgroundColor = "white";
+  gameResult.style.backgroundColor = colorGrey;
   gameResult.style.color = colorBlack;
   gameResult.style.fontSize = "24px";
 }
@@ -140,15 +143,14 @@ function tallyResults() {
   resetRound();
   buttons.forEach((button) => button.classList.add("notSelected"));
   gameResult.style.color = "white";
-  gameResult.style.backgroundColor = "";
-
   gameResult.style.fontSize = "32px";
+
   if (playerScore > computerScore) {
-    gameResult.textContent = "You are the winner of 5 rounds!";
-    gameContainer.style.backgroundColor = colorGreen;
+    gameResult.textContent = "You Win! Player is the winner of 5 rounds!";
+    gameResult.style.backgroundColor = colorGreen;
   } else {
-    gameResult.textContent = "The computer is the winner of 5 rounds!";
-    gameContainer.style.backgroundColor = colorRed;
+    gameResult.textContent = "You Lose! Computer is the winner of 5 rounds!";
+    gameResult.style.backgroundColor = colorRed;
   }
 
   window.setTimeout(() => {
