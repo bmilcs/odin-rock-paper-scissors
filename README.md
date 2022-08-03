@@ -33,8 +33,13 @@ Welcome to Bryan Miller's Rock Paper Scissors Project, the [third assignment](ht
 
 ## Screenshots
 
-<img src="./img/desktop.png" width="375px" alt="Desktop #1">
-<img src="./img/desktop2.png" width="375px" alt="Desktop #2">
+> Desktop
+
+<img src="./img/desktop2.png" width="80%" alt="Desktop #2">
+
+> Mobile
+
+<img src="./img/mobile.png" width="375px" alt="mobile">
 
 ## Deployment
 
