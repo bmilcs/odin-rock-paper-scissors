@@ -35,15 +35,11 @@ Welcome to Bryan Miller's Rock Paper Scissors Project, the [third assignment](ht
 
 > Desktop
 
-<table><tr><td>
 <img src="./img/desktop2.png" width="80%" alt="Desktop #2">
-</td></tr></table>
 
 > Mobile
 
-<table><tr><td>
 <img src="./img/mobile.png" width="375px" alt="mobile">
-</td></tr></table>
 
 ## Deployment
 
