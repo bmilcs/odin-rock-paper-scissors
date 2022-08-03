@@ -35,11 +35,11 @@ Welcome to Bryan Miller's Rock Paper Scissors Project, the [third assignment](ht
 
 > Desktop
 
-<img src="./img/desktop2.png" width="80%" alt="Desktop #2">
+<img src="./img/desktop2.png" width="80%" alt="Desktop #2" style="border: 3px solid black; border-radius: 0.75rem;">
 
 > Mobile
 
-<img src="./img/mobile.png" width="375px" alt="mobile">
+<img src="./img/mobile.png" width="375px" alt="mobile" style="border: 3px solid black; border-radius: 0.75rem;">
 
 ## Deployment
 
