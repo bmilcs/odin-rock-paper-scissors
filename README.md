@@ -26,15 +26,15 @@ Welcome to Bryan Miller's Rock Paper Scissors Project, the [third assignment](ht
 - [Andy Harris's 'Think like a programmer' technique](https://www.youtube.com/watch?v=azcrPFhaY9k)
 - Git Fundamentals
 
-# Links
+## Links
 
 - [Live Demo](https://bmilcs.github.io/odin-rock-paper-scissors/)
 - [My Odin Project Progress](https://github.com/bmilcs/op)
 
 ## Screenshots
 
-![Desktop #1](.img/../img/desktop.png | width=100)
-![Desktop #2](.img/../img/desktop2.png | width=100)
+<img src="./img/desktop.png" width="470px" alt="Desktop #1">
+<img src="./img/desktop2.png" width="470px" alt="Desktop #2">
 
 ## Deployment
 
