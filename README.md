@@ -29,7 +29,7 @@ Welcome to Bryan Miller's Rock Paper Scissors Project, the [third assignment](ht
 ## Links
 
 - [Live Demo](https://bmilcs.github.io/odin-rock-paper-scissors/)
-- [My Odin Project Progress](https://github.com/bmilcs/op)
+- [My Odin Project Progress](https://github.com/bmilcs/odin-project)
 
 ## Screenshots
 
